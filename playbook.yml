@@ -1,0 +1,8 @@
+- hosts: terraform-ansible
+  tasks:
+    - name: Instalando o python3
+      yum:
+        pkg:
+        - python3
+        update_cache: yes
+      become: yes

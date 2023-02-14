@@ -18,8 +18,14 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
   key_name      = "alura-estudo"
+  # user_data = <<-EOF
+  #                #!/bin/bash
+  #                cd /home/ec2-user
+  #                echo "<h1>Feito com Terraform!</h1>" > index.html
+  #                nohup busybox httpd -f -p 8080 &
+  #                EOF
 
   tags = {
-    Name = "TerraformPrimeiraAlura"
+    Name = "Terraform Ansible Python"
   }
 }
