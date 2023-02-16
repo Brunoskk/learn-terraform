@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  profile = "bruno.estudo"
+  profile = "<your-profile>"
   region  = "us-east-1"
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-0aa7d40eeae50c9a9"
+  ami           = "ami-09cd747c78a9add63"
   instance_type = "t2.micro"
   key_name      = "alura-estudo"
   # user_data = <<-EOF
